@@ -69,25 +69,22 @@ section p {
 }
 
 /* grid */
-
 .grid-container {
-    min-width: 65%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
-    grid-gap: 1rem;
-    grid-auto-flow: row;
-    justify-content: center;
+    display: flex;
+    flex-flow: row wrap;
     margin: 40px 0 0 75px;
+    max-width: 75%;
 }
 
 .grid-item {
     background-color: #f2cc8f;
-    border-radius: 5px;
     height: 150px;
-    width: 225px;
+    width: 200px;
+    border-radius: 5px;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
+    margin: 0 10px 10px 0;
 }
 
 .project-title {
@@ -97,11 +94,13 @@ section p {
     font-weight: bold;
     font-style: italic;
     margin: 10px;
+    display: none;
+    z-index: 1;
 }
 
-.project-title:hover {
-    visibility: visible;
-    transition: visibility 1.5s;
+.grid-item:hover .project-title {
+    display: block;
+    transition: display 2s;
 }
 
 .grid-item:hover {
