@@ -71,21 +71,27 @@ section p {
 
 /* grid */
 .grid-container {
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
     margin: 40px 0 0 75px;
+    grid-template-columns: repeat(5, 1fr);
     max-width: 75%;
 }
 
 .grid-item {
     background-color:#c4a93e;
-    height: 150px;
-    width: 200px;
+    min-height: 150px;
+    min-width: 200px;
     border-radius: 5px;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     margin: 0 10px 10px 0;
+}
+
+.item-1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    justify-self: stretch;
 }
 
 .project-title {
