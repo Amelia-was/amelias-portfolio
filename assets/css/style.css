@@ -1,3 +1,4 @@
+/* page styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,12 +12,44 @@ body {
     font-size: 16px;
 }
 
+/* banner */
+.banner-image {
+    width: 100%;
+    height: auto;
+    z-index: 999;
+    display: block;
+}
+
+/* animation code from CSS Tricks */
+.animate {
+    width: 100%;
+    height: max-content;
+    background-color: #8abbd6;
+    animation: colour-change 2s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    position: sticky;
+    top: 0;
+    z-index: 998;
+}
+
+@keyframes colour-change {
+    50% {
+        background-color: #292c3a;
+    }
+    to {
+        background-color: #8abbd6;
+    }
+}
+
+/* main header */
 h1 {
     color: #292c3a;
     font-size: 36px;
     font-style: italic;
     margin: 40px 75px;
 }
+
 /* nav bar */
 nav h3 {
     color: #292c3a;
@@ -57,6 +90,12 @@ nav h3 {
     align-items: flex-start;
 }
 
+.flex-baseline-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+}
 
 /* about */
 #about p {
@@ -66,7 +105,15 @@ nav h3 {
     line-height: 1.5;
 }
 
-/* grid */
+#about img {
+    height: 200px;
+    width: auto;
+    float: left;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+/* work section styles */
 .grid-container {
     display: grid;
     margin: 40px 0 0 75px;
@@ -118,13 +165,6 @@ nav h3 {
     z-index: 3;
 }
 
-/*
-.grid-item:hover {
-    background-color: #292c3a;
-    transition: background-color 1s;
-}
-*/
-
 .screen {
     opacity: 0;
     height: 100%;
@@ -143,42 +183,7 @@ nav h3 {
     transition: opacity 1s;
 }
 
-.banner-image {
-    width: 100%;
-    height: auto;
-    z-index: 999;
-    display: block;
-}
-
-/* animation code from CSS Tricks */
-.animate {
-    width: 100%;
-    height: max-content;
-    background-color: #8abbd6;
-    animation: colour-change 2s linear infinite;
-    animation-play-state: paused;
-    animation-delay: calc(var(--scroll) * -1s);
-    position: sticky;
-    top: 0;
-    z-index: 998;
-}
-
-@keyframes colour-change {
-    50% {
-        background-color: #292c3a;
-    }
-    to {
-        background-color: #8abbd6;
-    }
-}
-
-.flex-baseline-row {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: baseline;
-}
-
+/* contact section */
 #contact ul {
     list-style-type: none;
     font-size: 20px;
@@ -196,7 +201,6 @@ nav h3 {
 }
 
 /* media queries */
-
 /* smaller desktop screens and tablets */
 @media screen and (max-width: 1024px) {
     .grid-container {
@@ -206,13 +210,33 @@ nav h3 {
 }
 
 @media screen and (max-width: 980px) {
+    .section-title {
+        width: 100%;
+    }
     .grid-container {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .grid-item {
+        min-height: 120px;
+        min-width: 160px;
+    }
+    h1, .section-title, .nav-list, #about p, .grid-container, #contact ul {
+        margin: 15px 0 15px 40px;
     }
 }
 
-/* tablets and phones */
+/* tablets and large phones */
 @media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .animate {
+        position: relative;
+    }
+}
+
+/* phones */
+@media screen and (max-width: 575px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
