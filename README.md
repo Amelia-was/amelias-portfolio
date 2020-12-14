@@ -5,7 +5,7 @@ The project goal was to create a developer portfolio showcasing recent work with
 
 The website can be found [here](https://amelia-was.github.io/amelias-portfolio/)
 
-![Portfolio Website](./assets/images/snapshot.png)
+![Portfolio Website](./assets/images/portfolio-snapshot.png)
 
 ## Built Using
 - HTML
