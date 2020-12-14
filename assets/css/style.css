@@ -50,7 +50,8 @@ nav h3 {
 .section-title {
     color: #292c3a;
     font-size: 36px;
-    margin: 40px 100px 0 75px;
+    margin: 40px 0 20px 75px;
+    min-width: 12%;
 }
 
 .flex-row {
@@ -62,7 +63,7 @@ nav h3 {
 
 
 /* about */
-section p {
+#about p {
     margin: 40px 0 0 75px; 
     max-width: 65%;
     font-size: 20px;
@@ -174,7 +175,28 @@ section p {
     }
 }
 
+.flex-baseline-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
 #contact ul {
     list-style-type: none;
-    margin: 40px 0 40px 75px;
+    font-size: 20px;
+    margin: 40px 0 0 75px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+#contact a {
+    color: #c4a93e;
+    text-decoration: none;
+    margin: 0 40px 0 0;
+}
+
+#contact a:hover {
+    color: #b56038;
 }
