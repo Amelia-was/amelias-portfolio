@@ -144,8 +144,8 @@ nav h3 {
 }
 
 .banner-image {
-    max-width: auto;
-    height: 200px;
+    width: 100%;
+    height: auto;
     z-index: 999;
 }
 
