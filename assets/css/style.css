@@ -5,14 +5,26 @@
     padding: 0;
 }
 
+:root {
+    --main: #c4a93e;
+    --text: #292c3a;
+    --accent: #b56038;
+}
+
 body {
     background-color: #fff;
     font-family: Helvetica, Arial, sans-serif;
     color: #292c3a;
     font-size: 16px;
 }
+/* 
+main {
+    margin: 100px auto;
+    background-color: #fff;
+} */
 
-/* banner */
+
+/*banner*/
 .banner-image {
     width: 100%;
     height: auto;
@@ -43,6 +55,12 @@ body {
 }
 
 /* main header */
+/* header {
+    background-color: #b56038;
+    border-left: solid 10px #c4a93e;
+} */
+
+
 h1 {
     color: #292c3a;
     font-size: 36px;
@@ -61,18 +79,21 @@ nav h3 {
     margin: 20px 0 20px 40px;
 }
 
-
 .nav-list a:hover {
-    background-color:#c4a93e;
+    border-bottom: solid 3px #c4a93e;
 }
 
 .nav-list a {
     text-decoration: none;
     color: #292c3a;
-    padding: 20px;
+    padding: 10px;
     margin-right: 20px;
-    border-radius: 5px;
     width: auto;
+    transition: all linear 0.2s;
+}
+
+.unfeatured {
+    max-width: 65%;
 }
 
 /* section style */
@@ -117,8 +138,10 @@ nav h3 {
 .grid-container {
     display: grid;
     margin: 40px 0 0 75px;
-    grid-template-columns: repeat(5, 1fr);
     max-width: 75%;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-flow: dense;
+    grid-gap: 1em;
 }
 
 .grid-item {
@@ -129,31 +152,80 @@ nav h3 {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    margin: 0 10px 10px 0;
     overflow: hidden;
     position: relative;
 }
 
-.item-1 {
+/* .flex-item {
+    background-color:#c4a93e;
+    min-height: 150px;
+    min-width: 200px;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin: 0 10px 10px 0;
+    overflow: hidden;
+    position: relative;
+} */
+
+.featured {
     grid-column: 1 / 3;
     grid-row: 1 / 3;
+    place-self: stretch;
+}
+
+.item-1 {
     justify-self: stretch;
+    background-image: url("../images/tweet-tracks-img.png");
+    background-position: left;
+    background-size: cover;
+}
+
+.item-2 {
+    background-image: url("../images/weather-dashboard-screenshot.png");
+    background-position: left;
+    background-size: cover;
+}
+
+.item-3 {
+    background-image: url("../images/work-day-screenshot.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.item-4 {
+    background-image: url("../images/code-quiz-screenshot.png");
+    background-position: left;
+    background-size: cover;
+}
+
+.item-5 {
+    background-image: url("../images/taskmaster-pro-img.png");
+    background-position: left;
+    background-size: cover;
 }
 
 .item-6 {
+    background-image: url("../images/taskinator-img.png");
+    background-position: left;
+    background-size: cover;
+}
+
+.item-7 {
     background-image: url("../images/robot-gladiators-img.png");
     background-position: center;
     background-size: cover;
 }
 
-.item-7 {
+.item-8 {
     background-image: url("../images/run-buddy-img.png");
     background-position: center;
     background-size: cover;
 }
 
 .project-title {
-    color: #f4f1de;
+    color: #fff;
     text-align: center;
     font-size: 16px;
     font-weight: bold;
@@ -226,6 +298,11 @@ nav h3 {
     h1, .section-title, .nav-list, #about p, .grid-container, #contact ul {
         margin: 15px 0 15px 40px;
     }
+}
+
+.projects {
+    margin: 40px 0 0 75px;
+    max-width: 75%;
 }
 
 /* tablets and large phones */
