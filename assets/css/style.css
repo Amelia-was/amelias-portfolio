@@ -33,6 +33,10 @@ main {
     box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.1);
 }
 
+header {
+    margin: 0 auto;
+}
+
 
 /*banner*/
 .banner-image {
@@ -47,7 +51,7 @@ main {
 .animate {
     max-width: 1024px;
     margin: 0 auto;
-    height: max-content;
+    height: 150px;
     background-color: var(--accent2Lightest);
     animation: colour-change 2s linear infinite;
     animation-play-state: paused;
@@ -68,16 +72,16 @@ main {
 
 h1 {
     font-family: 'Averia Serif Libre', cursive;
-    color:var(--text);
+    color: #FFF;
     font-size: 48px;
     font-weight: 700;
-    margin: 40px 75px;
+    margin: 40px 75px 40px 0;
 }
 
 /* nav bar */
 nav h3 {
     font-family: 'Averia Serif Libre', cursive;
-    color: var(--text);
+    color: #FFF;
     text-align: center;
     padding: 10px;
     width: auto;
@@ -87,17 +91,22 @@ nav h3 {
     list-style-type: none;
     margin: 20px 0 20px 40px;
 }
-
+/* 
+italic font moves entire layout
 nav h3:hover {
     font-style: italic;
-}
+} */
 
 .nav-list-item {
     margin-right: 20px;
 }
 
+.nav-list-item:last-child {
+    margin: 0;
+}
+
 .nav-list-item:hover > .nav-underline {
-    background: var(--main);
+    background: #FFF;
 }
 
 .nav-underline {
@@ -140,6 +149,10 @@ a {
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: baseline;
+}
+
+.justify-center {
+    justify-content: center;
 }
 
 /* about */
