@@ -261,6 +261,42 @@ a {
     background-size: cover;
 }
 
+.item-9 {
+    background-image: url("../images/tech-blog-screenshot.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.item-10 {
+    background-image: url("../images/api-screenshot.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.item-11 {
+    background-image: url("../images/notetaker-screenshot.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.item-12 {
+    background-image: url("../images/page-screenshot.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.item-13 {
+    background-image: url("../images/readme-screenshot.png");
+    background-position: left;
+    background-size: cover;
+}
+
+.item-14 {
+    background-image: url("../images/swatch-screenshot.png");
+    background-position: center;
+    background-size: cover;
+}
+
 .project-title {
     color: #fff;
     text-align: center;
